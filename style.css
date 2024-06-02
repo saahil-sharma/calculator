@@ -1,0 +1,38 @@
+#box {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: azure;
+}
+
+
+#calculator {
+    height: 50px;
+    width: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+#display {
+    width : 100%;
+    height: 20px;
+    background-color: gray;
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+button {
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color:aliceblue;
+    padding: 15px;
+    font-size: 1.5rem;
+}
+button:hover {
+    background-color: darkcyan;
+}
+#zero {
+    grid-column: span 2;
+}
