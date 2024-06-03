@@ -27,14 +27,15 @@ calculator.addEventListener("click", (event) => {
             calculated = false;
         }
         const value = event.target.textContent;
-        updateDisplay(value); 
         if (!firstValFinished) {
             container.first += value;
+            updateDisplay(container.first);
             console.log("The first value is " + container.first);
         } 
         else {
             container.second += value;
             console.log("The second value is " + container.second);
+            updateDisplay(container.second);
             
         } 
         }
@@ -70,8 +71,17 @@ ans.addEventListener("click", (event) => {
     }
     firstValFinished = true;
     updateDisplay(container.answer);
-})
+});
 
+const sign = document.getElementById("sign");
+sign.addEventListener("click", (event) => {
+    if (firstValFinished) {
+        container.second = '-';
+    } 
+    else {
+        container.first = '-';
+    } 
+});
 //functions 
 function clearDisplay() {
     display.textContent = 0;
@@ -118,3 +128,6 @@ function cleanContainer() {
     firstValFinished = false;
     container.answer = ''; 
 }
+
+
+
