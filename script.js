@@ -1,4 +1,6 @@
 // CALCULATOR
+
+//global variables
 const calculator = document.getElementById("calculator");
 const display = document.getElementById("display");
 
@@ -51,6 +53,7 @@ calculator.addEventListener("click", (event) => {
     container.operation = value;
   }
 });
+
 //equals support
 document.getElementsById("equal").addEventListener("click", (event) => {
   if (event.target.classList.contains("equal")) {
@@ -58,6 +61,7 @@ document.getElementsById("equal").addEventListener("click", (event) => {
     updateDisplay(calculate());
   }
 });
+
 //ans support
 document.getElementById("ans").addEventListener("click", (event) => {
   if (firstValFinished) {
@@ -89,6 +93,7 @@ function updateDisplay(value) {
     display.textContent += value;
   }
 }
+
 function calculate() {
   container.first = parseFloat(container.first);
   container.second = parseFloat(container.second);
